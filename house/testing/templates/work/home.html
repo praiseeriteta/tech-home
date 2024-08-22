@@ -1,0 +1,79 @@
+{% extends "work/main.html" %}
+{% block Title %}home{% endblock Title %}
+{% block content %}
+{% load static %}
+{% for user in info %}
+<li>{{user.id}} {{user.name}} is studying {{user.course}}</li>
+{% endfor %}
+<div class="container">
+    <div class="row">
+       
+            {% for  post in post%}
+            <div class="col-md-3">
+                <div class="card card-size mt-4">
+                    <img src="{% static 'images/spongebob.jpeg' %}" height="450" width="305">
+                    <div class="card-body">
+                        <h5 class="card-title">{{post.title}}</h5>
+                        <h6 class=" card-title">posted:{{post.created}}</h6>
+                        <h6 class="card-title">Author:{{post.author}}</h6>
+                        <p class="card-text">
+                           {{post.content}}
+                        </p>
+                        <br>
+                        <button class="btn btn-info">Read More</button>
+                    </div>
+                </div> 
+            </div> 
+            {% endfor %}
+        
+        <!-- <div class="col-md-3">               
+                <div class="card card-size mt-4">
+                    <img src="{% static 'images/spongebob.jpeg' %}" height="450" width="305">
+                    <div class="card-body">
+                        <h5 class="card-title">Testing out my knowledge on django</h5>
+                        <h6 class=" card-title">posted:</h6>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea magn
+                            am velit praesentium asperiores, dolores neque exercitationem, ne
+                            cessitatibus, perspiciatis est ad provident modi sed
+                        </p>
+                        <br>
+                        <button class="btn btn-info">Read More</button>
+                    </div>
+                </div>
+        </div> 
+        <div class="col-md-3">               
+                <div class="card card-size mt-4">
+                    <img src="{% static 'images/spongebob.jpeg' %}" height="450" width="305">
+                    <div class="card-body">
+                        <h5 class="card-title">Testing out my knowledge on django</h5>
+                        <h6 class=" card-title">posted:</h6>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea magn
+                            am velit praesentium asperiores, dolores neque exercitationem, ne
+                            cessitatibus, perspiciatis est ad provident modi sed
+                        </p>
+                        <br>
+                        <button class="btn btn-info">Read More</button>
+                    </div>
+                </div>
+        </div> 
+        <div class="col-md-3">              
+                <div class="card card-size mt-4">
+                    <img src="{% static 'images/spongebob.jpeg' %}" height="450" width="305">
+                    <div class="card-body">
+                        <h5 class="card-title">Testing out my knowledge on django</h5>
+                        <h6 class=" card-title">posted:</h6>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea magn
+                            am velit praesentium asperiores, dolores neque exercitationem, ne
+                            cessitatibus, perspiciatis est ad provident modi sed
+                        </p>
+                        <br>
+                        <button class="btn btn-info">Read More</button>
+                    </div>
+                </div>
+        </div> -->
+    </div>           
+</div>
+{% endblock content %}                                           
